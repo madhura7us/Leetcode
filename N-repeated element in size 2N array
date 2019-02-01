@@ -1,0 +1,8 @@
+class Solution:
+    def repeatedNTimes(self, A):
+        count = [0] * 100000
+        for item in A:
+            count[item] += 1
+            if count[item] == 2:
+                return item
+        
