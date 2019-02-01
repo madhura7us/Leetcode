@@ -1,0 +1,13 @@
+class Solution:
+    def isPalindrome(self,x):
+        
+        myDig = str(x)
+        if myDig.isdigit():
+            dig = [int(d) for d in myDig]
+            q=  list(reversed(dig))
+            if dig == q:
+                return True
+            else:
+                return False
+        else:
+            return False
