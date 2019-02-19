@@ -1,0 +1,22 @@
+class Solution:
+    def judgeCircle(self, moves):
+        """
+        :type moves: str
+        :rtype: bool
+        """
+        left = right = up = down = 0
+        for item in moves:
+            if item == 'L':
+                left += 1
+            if item == 'R':
+                right += 1
+            if item == 'U':
+                up += 1
+            if item == 'D':
+                down += 1
+        #print(left, right, up, down)
+        if(up != 0 and up == down and left == right) or (left !=0 and left == right and up == down):
+                return True
+            
+        else:
+            return False
